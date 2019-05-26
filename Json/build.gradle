@@ -1,5 +1,4 @@
 apply plugin: 'java'
-apply plugin: 'com.novoda.bintray-release'
 
 allprojects {
     sourceCompatibility = 1.8
@@ -21,9 +20,6 @@ buildscript {
         mavenCentral()
         maven { url 'https://jitpack.io' }
     }
-    dependencies {
-        classpath 'com.novoda:bintray-release:0.4.0'
-    }
 }
 
 repositories {
@@ -36,13 +32,4 @@ dependencies {
 
     implementation  'com.github.LightSun:ReflectyIO:1.1.0'
     implementation 'com.google.code.gson:gson:2.8.5'
-}
-
-publish {
-    userOrg = 'lightsun' //bintray user name
-    groupId = 'com.heaven7.java.json'
-    artifactId = 'Json'
-    publishVersion = '1.0.0'
-    desc = 'this is a lib which user to serialize, deserialize "json" data.'
-    website = 'https://github.com/LightSun/ReflectyIO'
 }
